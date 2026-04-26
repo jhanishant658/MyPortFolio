@@ -4,6 +4,9 @@
 import { personal, stats } from "../data/portfolioData";
 
 export default function Hero() {
+  const [firstName, ...rest] = personal.name.split(" ");
+  const lastName = rest.join(" ");
+
   return (
     <section
       id="hero"
@@ -30,13 +33,13 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Eyebrow */}
         <p className="font-mono text-orange-500 text-xs uppercase tracking-[0.25em] mb-6 animate-[fadeUp_0.8s_ease_0.2s_both]">
-          // Full Stack Developer · Java & Spring Boot Specialist
+          // {personal.title} · {personal.subtitle}
         </p>
 
         {/* Name */}
         <h1 className="font-['Syne'] font-black leading-[0.88] tracking-tight mb-8 animate-[fadeUp_0.8s_ease_0.4s_both]">
           <span className="block text-white" style={{ fontSize: "clamp(4rem,10vw,9rem)" }}>
-            Nishant
+            {firstName}
           </span>
           <span
             className="block"
@@ -46,7 +49,7 @@ export default function Hero() {
               color: "transparent",
             }}
           >
-            Jha
+            {lastName}
           </span>
         </h1>
 
@@ -55,6 +58,7 @@ export default function Hero() {
           {personal.tagline}
           <br />
           <span className="text-zinc-500 text-sm font-mono mt-1 block">{personal.education}</span>
+          <span className="text-zinc-500 text-sm font-mono mt-1 block">{personal.availability}</span>
         </p>
 
         {/* CTA buttons */}
@@ -71,14 +75,16 @@ export default function Hero() {
           >
             Get In Touch
           </a>
-          <a
-            href={personal.github}
-            target="_blank"
-            rel="noreferrer"
-            className="border border-white/10 text-zinc-400 hover:text-white hover:border-white/30 font-mono px-7 py-3 rounded-sm text-xs uppercase tracking-widest transition-all duration-200 hover:-translate-y-1"
-          >
-            GitHub ↗
-          </a>
+          {personal.resume && (
+            <a
+              href={personal.resume}
+              target="_blank"
+              rel="noreferrer"
+              className="border border-white/10 text-zinc-400 hover:text-white hover:border-white/30 font-mono px-7 py-3 rounded-sm text-xs uppercase tracking-widest transition-all duration-200 hover:-translate-y-1"
+            >
+              View Resume ↗
+            </a>
+          )}
         </div>
 
         {/* Stats */}

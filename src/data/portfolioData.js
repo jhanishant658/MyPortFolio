@@ -7,6 +7,9 @@ export const personal = {
   name: "Nishant Jha",
   title: "Full Stack Developer",
   subtitle: "Java & Spring Boot Specialist",
+  location: "Greater Noida, India",
+  availability: "Open to internships and freelance opportunities",
+  resume: "https://drive.google.com/file/d/1u0b-hG7bSYOUR_RESUME_LINK/view",
   tagline:
     "Architecting scalable microservices and building production-ready applications with Spring Boot & React.js.",
   bio1:

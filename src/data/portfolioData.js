@@ -9,7 +9,7 @@ export const personal = {
   subtitle: "Java & Spring Boot Specialist",
   location: "Delhi NCR | Open to Gurgaon/Noida/Delhi opportunities",
   availability: "Open to internships and freelance opportunities",
-  resume: "https://drive.google.com/file/d/1u0b-hG7bSYOUR_RESUME_LINK/view",
+  resume: "https://drive.google.com/file/d/1K_PBIbMsljbconBQfg9M1P7ZS3MxMtYe/view?usp=drive_link",
   tagline:
     "Architecting scalable microservices and building production-ready applications with Spring Boot & React.js.",
   bio1:

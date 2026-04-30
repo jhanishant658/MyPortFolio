@@ -37,14 +37,14 @@ export default function Navbar() {
         scrolled ? "bg-zinc-950/90 backdrop-blur-lg border-b border-white/5" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-12 py-4 sm:py-5 flex items-center justify-between gap-3">
         {/* Logo */}
         <a href="#hero" className="font-['Syne'] font-extrabold text-xl tracking-tight">
           NJ<span className="text-orange-500">.</span>
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden lg:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((l) => (
             <li key={l.href}>
               <a
@@ -62,7 +62,7 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href={`mailto:${personal.email}`}
-          className="hidden md:inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-['Syne'] font-bold text-sm px-5 py-2 rounded-sm transition-all duration-200 hover:-translate-y-0.5"
+          className="hidden sm:inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-['Syne'] font-bold text-xs sm:text-sm px-4 sm:px-5 py-2 rounded-sm transition-all duration-200 hover:-translate-y-0.5"
         >
           Hire Me →
         </a>
@@ -70,7 +70,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           aria-label="Toggle navigation menu"
-          className="md:hidden text-zinc-400 hover:text-white"
+          className="lg:hidden text-zinc-400 hover:text-white"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <div className={`w-5 h-0.5 bg-current mb-1 transition-all ${menuOpen ? "rotate-45 translate-y-1.5" : ""}`} />
@@ -81,7 +81,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-zinc-950 border-t border-white/5 px-6 py-4 flex flex-col gap-4">
+        <div className="lg:hidden bg-zinc-950 border-t border-white/5 px-4 sm:px-6 py-4 flex flex-col gap-4">
           {navLinks.map((l) => (
             <a
               key={l.href}

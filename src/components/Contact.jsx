@@ -13,7 +13,7 @@ const contactCards = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-28 px-6 md:px-12 bg-zinc-950 border-t border-white/5">
+    <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 md:px-10 lg:px-12 bg-zinc-950 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left */}

@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-24 pb-16 px-6 md:px-12"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-28 sm:pt-32 pb-14 sm:pb-16 px-4 sm:px-6 md:px-10 lg:px-12"
     >
       {/* Animated grid background */}
       <div
@@ -26,25 +26,25 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Ghost bg text */}
-      <span className="absolute right-[-1rem] top-1/2 -translate-y-1/2 font-['Syne'] font-black text-[22vw] text-white/[0.015] leading-none select-none pointer-events-none whitespace-nowrap">
+      <span className="hidden sm:block absolute right-[-1rem] top-1/2 -translate-y-1/2 font-['Syne'] font-black text-[22vw] text-white/[0.015] leading-none select-none pointer-events-none whitespace-nowrap">
         DEV
       </span>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Eyebrow */}
-        <p className="font-mono text-orange-500 text-xs uppercase tracking-[0.25em] mb-6 animate-[fadeUp_0.8s_ease_0.2s_both]">
+        <p className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] mb-6 animate-[fadeUp_0.8s_ease_0.2s_both]">
           // {personal.title} · {personal.subtitle}
         </p>
 
         {/* Name */}
         <h1 className="font-['Syne'] font-black leading-[0.88] tracking-tight mb-8 animate-[fadeUp_0.8s_ease_0.4s_both]">
-          <span className="block text-white" style={{ fontSize: "clamp(4rem,10vw,9rem)" }}>
+          <span className="block text-white" style={{ fontSize: "clamp(2.8rem,11vw,9rem)" }}>
             {firstName}
           </span>
           <span
             className="block"
             style={{
-              fontSize: "clamp(4rem,10vw,9rem)",
+              fontSize: "clamp(2.8rem,11vw,9rem)",
               WebkitTextStroke: "2px white",
               color: "transparent",
             }}
@@ -54,7 +54,7 @@ export default function Hero() {
         </h1>
 
         {/* Tagline */}
-        <p className="text-zinc-400 text-lg leading-relaxed max-w-xl mb-10 animate-[fadeUp_0.8s_ease_0.6s_both]">
+        <p className="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-xl mb-10 animate-[fadeUp_0.8s_ease_0.6s_both]">
           {personal.tagline}
           <br />
           <span className="text-zinc-500 text-sm font-mono mt-1 block">{personal.education}</span>
@@ -88,7 +88,7 @@ export default function Hero() {
         </div>
 
         {/* Stats */}
-        <div className="flex flex-wrap gap-10 animate-[fadeUp_0.8s_ease_1s_both]">
+        <div className="flex flex-wrap gap-x-8 gap-y-6 sm:gap-10 animate-[fadeUp_0.8s_ease_1s_both]">
           {stats.map((s, i) => (
             <div key={i}>
               <div className="font-['Syne'] font-black text-4xl text-orange-500 leading-none">
@@ -103,7 +103,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-[fadeUp_0.8s_ease_1.2s_both]">
+      <div className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-[fadeUp_0.8s_ease_1.2s_both]">
         <span className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest">Scroll</span>
         <div className="w-0.5 h-12 bg-gradient-to-b from-orange-500 to-transparent" />
       </div>
